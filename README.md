@@ -2,7 +2,7 @@
 
 A web-based JavaScript project that renders a fullscreen “space” particle system in 3D using Three.js and controls it with MediaPipe Hands, WITHOUT showing the webcam feed.
 
-Current gesture controls
+The Current gesture controls
 - No hand: ambient drift + slow spin (always moving).
 - Open palm: instant spread (particles burst outward).
 - Fist (closed hand): compresses into a 3D spiral galaxy at the center.
