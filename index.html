@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Particle Space Scene</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 2;
+        color: #dbe7ff;
+        font-size: 14px;
+        line-height: 1.4;
+        user-select: none;
+        text-shadow: 0 0 8px rgba(120, 170, 255, 0.55);
+      }
+
+      #overlay button {
+        margin-top: 6px;
+        padding: 6px 10px;
+        font-size: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        background: rgba(20, 30, 50, 0.6);
+        color: #e9f1ff;
+        cursor: pointer;
+      }
+
+      #overlay button:hover {
+        background: rgba(50, 70, 110, 0.7);
+      }
+
+      canvas {
+        display: block;
+      }
+
+      #input-video {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="hand-status">Hand detected ❌</div>
+      <div id="pinch-status">Pinch OFF</div>
+      <button id="stop-camera">Stop Camera</button>
+    </div>
+    <video id="input-video" autoplay playsinline></video>
+
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
